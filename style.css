@@ -24,6 +24,13 @@ p {
 
 }
 
+.hero{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  padding-top: 30px;
+}
+
 .ball,
 .ball1,
 .ball2 {
@@ -33,5 +40,16 @@ p {
   background: brown;
   display: inline-block;
 }
+
+
+.milk {
+  position: relative;
+  width: 500 px;
+  height: 220px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 
