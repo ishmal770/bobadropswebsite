@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #fff7f4;
+}
+
+p {
+  margin: 0;
+  padding-top: 30px;
+  text-align: center;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  color: #5d2a2a;
+  font-family: "Comic Sans MS", "Brush Script MT", cursive;
+  letter-spacing: 2px;
+}
