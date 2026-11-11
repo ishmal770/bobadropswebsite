@@ -14,29 +14,6 @@ p {
   letter-spacing: 2px;
 }
 
-.bobasection {
-  display: flex;
-  align-items:center;
-  gap: 20px;
-  padding-top: 30px;
-  padding-bottom: 10px;
-
-
-}
-
-.milk-cup {
-  position: relative;
-  z-index: 2;
-  width: 220px;
-  height: 150px;
-  border-radius: 35% 35% 45% 45%;
-  background: linear-gradient(#f8f3ef, #f0e1d7);
-  border: 4px solid #c08d73;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 18px 30px rgba(96, 58, 35, 0.12);
-}
 
 .hero {
   width: 100%;
@@ -55,30 +32,6 @@ p {
   overflow: hidden;
 }
 
-.cup {
-  position: absolute;
-  left: 50%;
-  top: 54%;
-  transform: translate(-50%, -50%);
-  width: 370px;
-  height: 180px;
-  background: rgba(255,255,255,0.2);
-  border: 4px solid #000;
-  border-top: none;
-  border-radius: 0 0 120px 120px / 0 0 100px 100px;
-}
-
-.foam {
-  position: absolute;
-  left: 50%;
-  top: -24px;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 30px;
-  border-top: 4px solid #000;
-  border-radius: 50%;
-  background: transparent;
-}
 
 .label {
   position: absolute;
@@ -90,109 +43,4 @@ p {
   color: #3b1d1d;
   font-family: "Comic Sans MS", "Brush Script MT", cursive;
 }
-
-.straw {
-  position: absolute;
-  left: 50%;
-  top: 8%;
-  width: 18px;
-  height: 180px;
-  background: #000;
-  transform: translateX(-50%);
-  border-radius: 10px;
-}
-
-.straw::before {
-  content: "";
-  position: absolute;
-  left: -8px;
-  top: -22px;
-  width: 34px;
-  height: 24px;
-  border: 4px solid #000;
-  border-bottom: none;
-  border-radius: 12px 12px 0 0;
-  background: transparent;
-}
-
-.boba {
-  position: absolute;
-  width: 95px;
-  height: 95px;
-  border: 0;
-  border-radius: 48% 52% 46% 54% / 52% 46% 54% 48%;
-  background:
-    radial-gradient(circle at 36% 30%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 40%),
-    radial-gradient(circle at 52% 54%, rgba(46, 24, 15, 0.95) 0%, rgba(46, 24, 15, 0.7) 48%, rgba(46, 24, 15, 0) 80%);
-  filter: blur(1.2px);
-  mix-blend-mode: multiply;
-  opacity: 0.9;
-}
-
-.boba::before {
-  content: "";
-  position: absolute;
-  inset: 6% 4% 10% 8%;
-  border-radius: 54% 46% 50% 50% / 46% 54% 46% 54%;
-  background: radial-gradient(circle at 62% 68%, rgba(18, 9, 5, 0.6) 0%, rgba(18, 9, 5, 0) 70%);
-  filter: blur(4px);
-}
-
-.b1 { left: 16%; top: 58%; }
-.b2 { left: 52%; top: 30%; }
-.b3 { right: 18%; top: 58%; }
-.b4 { left: 32%; bottom: 8%; }
-
-.wave {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  border-top: 4px solid #000;
-  border-radius: 50%;
-}
-
-.wave-top {
-  top: 180px;
-}
-
-.ball,
-.ball1,
-.ball2 {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: brown;
-  display: inline-block;
-  box-shadow: 0 8px 19px rgba(93,42,42,0.5);
-  animation: jiggle 1.9s ease-in-out infinite;
-
-}
-
-.ball {top:10px; left:40px;}
-.ball1 {top:0; right:80px;}
-.ball2 {bottom:20px; right:50px;}
-
-@keyframes jiggle {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  25% { transform: translateY(-8px) rotate(-8deg); }
-  50% { transform: translateY(4px) rotate(8deg); }
-  75% { transform: translateY(-6px) rotate(-6deg); }
-}
-
-.milk {
-  position: relative;
-  width: 500 px;
-  height: 220px;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.milk-cup span {
-  font-size: 3rem;
-  color: #5d2a2a;
-  font-family: "Comic Sans MS", "Brush Script MT", cursive;
-}
-
 
