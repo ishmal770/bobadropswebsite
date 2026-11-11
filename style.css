@@ -13,3 +13,25 @@ p {
   font-family: "Comic Sans MS", "Brush Script MT", cursive;
   letter-spacing: 2px;
 }
+
+.bobasection {
+  display: flex;
+  align-items:center;
+  gap: 20px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+
+
+}
+
+.ball,
+.ball1,
+.ball2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: brown;
+  display: inline-block;
+}
+
+
