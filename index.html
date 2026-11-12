@@ -20,9 +20,59 @@
         <div class="drop drop8"></div>
 
         <img class="bobaimg" src="boba.png" alt="Boba!" />
-    </section>
-    </header>
 
-    <p>Boba Drops</p>
+
+
+        
+         <p class="title">Boba Drops</p>
+       
+        
+    </section>
+
+
+    </header>
+    <div class=about>
+        <p class="tagline">I built this basic Boba Drops website to run a workshop for my club!</p>
+    </div>
+    <script>
+      const hero = document.querySelector(".hero");
+      const drops = document.querySelectorAll(".drop");
+
+      const REACH = 150;
+      const STRENGTH = 90;
+
+      function pushAway(clientX, clientY) {
+        drops.forEach((drop) => {
+          const box = drop.getBoundingClientRect();
+          const pushedX = parseFloat(drop.style.getPropertyValue("--push-x")) || 0;
+          const pushedY = parseFloat(drop.style.getPropertyValue("--push-y")) || 0;
+
+          const cx = box.left + box.width / 2 - pushedX;
+          const cy = box.top + box.height / 2 - pushedY;
+
+          const dx = cx - clientX;
+          const dy = cy - clientY;
+          const dist = Math.hypot(dx, dy) || 1;
+
+          if (dist < REACH) {
+            const force = (1 - dist / REACH) * STRENGTH;
+            drop.style.setProperty("--push-x", (dx / dist) * force + "px");
+            drop.style.setProperty("--push-y", (dy / dist) * force + "px");
+          } else {
+            drop.style.setProperty("--push-x", "0px");
+            drop.style.setProperty("--push-y", "0px");
+          }
+        });
+      }
+
+      hero.addEventListener("mousemove", (e) => pushAway(e.clientX, e.clientY));
+      hero.addEventListener("mouseleave", () => {
+        drops.forEach((drop) => {
+          drop.style.setProperty("--push-x", "0px");
+          drop.style.setProperty("--push-y", "0px");
+        });
+      });
+    </script>
+    
   </body>
 </html>

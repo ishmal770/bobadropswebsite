@@ -14,15 +14,46 @@ p {
   letter-spacing: 2px;
 }
 
-
 .hero {
+  position: relative;
   width: 100%;
-  min-height: 100vh;
-  min-height: 100svh;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 247, 236, 0.95) 0%, rgba(255, 247, 236, 0) 46%),
+    radial-gradient(circle at 82% 88%, rgba(70, 34, 14, 0.5) 0%, rgba(70, 34, 14, 0) 58%),
+    linear-gradient(160deg, #f9e2c6 0%, #eabf92 28%, #cf9663 55%, #a3683f 78%, #6f4227 100%);
+}
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 24px;
+  text-align: center;
+}
+.about {
+  background: #fdf3ea;
+  padding: 70px 24px;
+}
+
+.tagline {
+  margin: 0 auto;
+  max-width: 46ch;
+  padding: 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #46281a;
 }
 
 .drop {
@@ -32,6 +63,9 @@ p {
     opacity: 0;
     animation: fly var(--speed, 10s) ease-in-out infinite;
     animation-delay: var(--delay, 0s);
+  translate: var(--push-x, 0px) var(--push-y, 0px);
+  transition: translate 0.18s ease-out;
+  pointer-events: none;
 }
 
 @keyframes fly {
@@ -63,5 +97,24 @@ p {
 .drop7 { left: 78%; bottom: -8%; width: 28px; height: 28px; --speed: 11.5s; --delay: -6s;   --drift: 32px; }
 .drop8 { left: 90%; bottom: -8%; width: 20px; height: 20px; --speed: 9.5s;  --delay: -5.5s; --drift: -18px; }
 
+.bobaimg {
+  max-height: 42vh;
+  width: auto;
+  filter: drop-shadow(0 24px 30px rgba(70, 36, 18, 0.35));
+  animation: bob 6s ease-in-out infinite;
+}
 
+@keyframes bob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-16px) rotate(2deg); }
+}
 
+.title {
+  margin: 0;
+  padding: 0;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  line-height: 1;
+  letter-spacing: 2px;
+  color: #5d2a2a;
+  font-family: "Comic Sans MS", "Brush Script MT", cursive;
+}
